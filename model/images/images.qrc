@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/images">
+        <file alias="background">background.png</file>
+        <file alias="keyframe">keyframe.png</file>
+        <file alias="keyframe-drag">keyframe-drag.png</file>
+    </qresource>
+</RCC>
