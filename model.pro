@@ -9,6 +9,8 @@ QT       += core gui
 TARGET = model
 TEMPLATE = app
 
+include(extlibs/QxGraphics/QxGraphics.pri)
+include(extlibs/QxMesh/QxMesh.pri)
 
 SOURCES += main.cpp \
     model/JointModel.cpp \
