@@ -37,6 +37,8 @@ public:
     bool isVisible() const;
     void setVisible(bool visible);
 
+    QMap<Anim *, KeyFrames *> anims() const;
+
 private:
     friend class JointModel;
 

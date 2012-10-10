@@ -211,6 +211,11 @@ void Joint::setVisible(bool visible)
     m_isVisible = visible;
 }
 
+QMap<Anim *, KeyFrames *> Joint::anims() const
+{
+    return m_anims;
+}
+
 void Joint::syncAnims(Joint *joint) const
 {
     foreach(Anim *anim, joint->m_anims.keys())

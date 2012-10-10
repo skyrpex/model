@@ -14,8 +14,12 @@ class GraphicsJoint : public QGraphicsRectItem
 public:
     GraphicsJoint(Joint *joint, GraphicsJoint *parent = NULL);
 
+    Joint *joint() const;
+
     void setTransform(Transform *transform);
     Transform *transform() const;
+
+    QList<GraphicsJoint *> children() const;
 
     QGraphicsTextItem *label() const;
 

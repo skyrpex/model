@@ -39,14 +39,25 @@ GraphicsJoint::GraphicsJoint(Joint *joint, GraphicsJoint *parent) :
     setEnabled(false);
 }
 
+Joint *GraphicsJoint::joint() const
+{
+    return m_joint;
+}
+
 void GraphicsJoint::setTransform(Transform *transform)
 {
     m_transform = transform;
+    setEnabled(m_transform);
 }
 
 Transform *GraphicsJoint::transform() const
 {
     return m_transform;
+}
+
+QList<GraphicsJoint *> GraphicsJoint::children() const
+{
+    return m_children;
 }
 
 QGraphicsTextItem *GraphicsJoint::label() const
