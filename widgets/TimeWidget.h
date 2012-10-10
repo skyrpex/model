@@ -15,6 +15,9 @@ class TimeWidget : public QWidget
 public:
     explicit TimeWidget(JointModel *model, QWidget *parent = 0);
 
+signals:
+    void currentFrameChanged(int frame);
+
 public slots:
     void setCurrentAnim(int i);
 

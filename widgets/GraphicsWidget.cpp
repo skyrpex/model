@@ -16,3 +16,11 @@ GraphicsWidget::GraphicsWidget(JointModel *model, QWidget *parent) :
     l->setSpacing(0);
     l->addWidget(m_view);
 }
+
+void GraphicsWidget::setCurrentAnim(int i)
+{
+}
+
+void GraphicsWidget::setCurrentFrame(int frame)
+{
+}

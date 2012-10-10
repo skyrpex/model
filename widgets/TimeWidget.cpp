@@ -58,6 +58,7 @@ TimeWidget::TimeWidget(JointModel *model, QWidget *parent) :
         connect(m_delegate, SIGNAL(currentFrameChanged(int)), header, SLOT(setCurrentFrame(int)));
         connect(header, SIGNAL(currentFrameChanged(int)), m_delegate, SLOT(setCurrentFrame(int)));
         connect(header, SIGNAL(currentFrameChanged(int)), m_rightView->viewport(), SLOT(update()));
+        connect(header, SIGNAL(currentFrameChanged(int)), SIGNAL(currentFrameChanged(int)));
 
         splitter->addWidget(m_rightView);
     }

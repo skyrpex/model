@@ -25,6 +25,8 @@ MainWindow::MainWindow(QWidget *parent) :
     GraphicsWidget *gv = new GraphicsWidget(m_model);
 
     connect(aw, SIGNAL(currentAnimChanged(int)), tw, SLOT(setCurrentAnim(int)));
+    connect(aw, SIGNAL(currentAnimChanged(int)), gv, SLOT(setCurrentAnim(int)));
+    connect(tw, SIGNAL(currentFrameChanged(int)), gv, SLOT(setCurrentFrame(int)));
 
     QSplitter *hs = new QSplitter(this);
     hs->addWidget(aw);

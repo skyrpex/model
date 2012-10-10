@@ -15,6 +15,8 @@ public:
 signals:
     
 public slots:
+    void setCurrentAnim(int i);
+    void setCurrentFrame(int frame);
     
 private:
     QxGraphicsView *m_view;
