@@ -15,6 +15,7 @@ AnimsWidget::AnimsWidget(AnimModel *model, QWidget *parent) :
     m_view->setModel(model);
 
     QVBoxLayout *layout = new QVBoxLayout(this);
+    layout->setMargin(0);
     layout->setSpacing(0);
     {
         QToolBar *t = new QToolBar(this);

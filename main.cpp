@@ -17,39 +17,42 @@
 #include <QGraphicsView>
 #include <QGraphicsScene>
 #include "widgets/graphics/GraphicsJoint.h"
+#include "MainWindow.h"
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
 
-//    KeyFrames k;
-//    KeyFramesEditor e;
-//    e.setData(k.data, 20, 4);
-//    e.show();
+    MainWindow w;
+    w.show();
+////    KeyFrames k;
+////    KeyFramesEditor e;
+////    e.setData(k.data, 20, 4);
+////    e.show();
 
-    JointModel m;
+//    JointModel m;
 
-    TimeWidget *w = new TimeWidget(&m);
-    w->show();
+//    TimeWidget *w = new TimeWidget(&m);
+//    w->show();
 
-    AnimsWidget *aw = new AnimsWidget(m.animModel());
-    aw->show();
+//    AnimsWidget *aw = new AnimsWidget(m.animModel());
+//    aw->show();
 
-    aw->connect(aw, SIGNAL(currentAnimChanged(int)), w, SLOT(setCurrentAnim(int)));
+//    aw->connect(aw, SIGNAL(currentAnimChanged(int)), w, SLOT(setCurrentAnim(int)));
 
-    new Joint("Rack", m.root());
-    m.animModel()->addAnim(new Anim("Ist", 10, 10));
-    Joint *j = new Joint("Neck", m.root());
-    Anim *jah = new Anim("Jah", 10, 10);
-    m.animModel()->addAnim(jah);
-    new Joint("Head", j);
-    m.animModel()->addAnim(new Anim("Ber", 10, 10));
+//    new Joint("Rack", m.root());
+//    m.animModel()->addAnim(new Anim("Ist", 10, 10));
+//    Joint *j = new Joint("Neck", m.root());
+//    Anim *jah = new Anim("Jah", 10, 10);
+//    m.animModel()->addAnim(jah);
+//    new Joint("Head", j);
+//    m.animModel()->addAnim(new Anim("Ber", 10, 10));
 
-    jah->setFrameCount(100);
+//    jah->setFrameCount(100);
 
-    QGraphicsView *gv = new QGraphicsView(new QGraphicsScene);
-    gv->scene()->addItem(new GraphicsJoint(m.root()));
-    gv->show();
+//    QGraphicsView *gv = new QGraphicsView(new QGraphicsScene);
+//    gv->scene()->addItem(new GraphicsJoint(m.root()));
+//    gv->show();
 
     return a.exec();
 }

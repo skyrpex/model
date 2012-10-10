@@ -27,7 +27,8 @@ SOURCES += main.cpp \
     widgets/time/JointDelegate.cpp \
     dialogs/AnimDialog.cpp \
     Application.cpp \
-    widgets/graphics/GraphicsJoint.cpp
+    widgets/graphics/GraphicsJoint.cpp \
+    MainWindow.cpp
 
 HEADERS  += \
     model/JointModel.h \
@@ -47,10 +48,12 @@ HEADERS  += \
     widgets/time/JointDelegate.h \
     dialogs/AnimDialog.h \
     Application.h \
-    widgets/graphics/GraphicsJoint.h
+    widgets/graphics/GraphicsJoint.h \
+    MainWindow.h
 
 RESOURCES += \
     model/images/images.qrc
 
 FORMS += \
-    dialogs/AnimDialog.ui
+    dialogs/AnimDialog.ui \
+    MainWindow.ui
