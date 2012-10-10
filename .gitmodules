@@ -1,0 +1,6 @@
+[submodule "extlibs/QxGraphics"]
+	path = extlibs/QxGraphics
+	url = git://github.com/Skyrpex/QxGraphics.git
+[submodule "extlibs/QxMesh"]
+	path = extlibs/QxMesh
+	url = git://github.com/Skyrpex/QxMesh.git
