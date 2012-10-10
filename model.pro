@@ -30,7 +30,8 @@ SOURCES += main.cpp \
     dialogs/AnimDialog.cpp \
     Application.cpp \
     widgets/graphics/GraphicsJoint.cpp \
-    MainWindow.cpp
+    MainWindow.cpp \
+    widgets/GraphicsWidget.cpp
 
 HEADERS  += \
     model/JointModel.h \
@@ -51,7 +52,8 @@ HEADERS  += \
     dialogs/AnimDialog.h \
     Application.h \
     widgets/graphics/GraphicsJoint.h \
-    MainWindow.h
+    MainWindow.h \
+    widgets/GraphicsWidget.h
 
 RESOURCES += \
     model/images/images.qrc

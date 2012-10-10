@@ -4,7 +4,7 @@
 #include "model/Joint.h"
 #include "widgets/AnimsWidget.h"
 #include "widgets/TimeWidget.h"
-#include "widgets/graphics/GraphicsJoint.h"
+#include "widgets/GraphicsWidget.h"
 #include <QxGraphicsView>
 #include <QGraphicsScene>
 #include <QSplitter>
@@ -20,9 +20,9 @@ MainWindow::MainWindow(QWidget *parent) :
     new Joint("Rack", m_model->root());
 
     TimeWidget *tw = new TimeWidget(m_model);
+    tw->setDisabled(true);
     AnimsWidget *aw = new AnimsWidget(m_model->animModel());
-    QxGraphicsView *gv = new QxGraphicsView(new QGraphicsScene);
-    gv->scene()->addItem(new GraphicsJoint(m_model->root()));
+    GraphicsWidget *gv = new GraphicsWidget(m_model);
 
     connect(aw, SIGNAL(currentAnimChanged(int)), tw, SLOT(setCurrentAnim(int)));
 

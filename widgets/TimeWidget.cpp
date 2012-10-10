@@ -70,6 +70,7 @@ TimeWidget::TimeWidget(JointModel *model, QWidget *parent) :
 
 void TimeWidget::setCurrentAnim(int i)
 {
+    setEnabled(i != -1);
     m_rightProxy->showAnim(i);
 }
 
