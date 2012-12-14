@@ -206,9 +206,9 @@ void JointModel::onAnimsAboutToBeRemoved(const QModelIndex &parent, int first, i
 void JointModel::onAnimsChanged(const QModelIndex &topLeft, const QModelIndex &bottomRight)
 {
     emit layoutAboutToBeChanged();
-    for(int i = topLeft.column(); i <= bottomRight.column(); ++i)
+    for(int i = topLeft.row(); i <= bottomRight.row(); ++i)
     {
-        Anim *anim = m_animModel->anims().at(i-1);
+        Anim *anim = m_animModel->anims().at(i);
 
         QStack<Joint *> stack;
         stack.push(m_root);
